@@ -1,6 +1,6 @@
 const blogButton = document.getElementById('blog-button');
 blogButton.addEventListener('click', function () {
-    window.location.href = '/blog.html';
+    window.location.href = './blog.html';
 });
 
 
@@ -18,10 +18,12 @@ document.getElementById('first-donate-button').addEventListener('click', functio
         document.getElementById('modal').classList.remove('hidden');
         document.getElementById('close-btn').addEventListener('click', function () {
         document.getElementById('modal').classList.add('hidden')
+        
         })
     }
     else {
         alert('Invalid Amount!');
+        return;
     };
     const historyItem = document.createElement('div');
     historyItem.className = "p-10 border border-gray-400 rounded-xl mb-6 space-y-4";
@@ -50,10 +52,12 @@ document.getElementById('second-donate-button').addEventListener('click', functi
         document.getElementById('modal').classList.remove('hidden');
         document.getElementById('close-btn').addEventListener('click', function () {
         document.getElementById('modal').classList.add('hidden')
+        
         })
     }
     else {
-        alert('Invalid Amount!')
+        alert('Invalid Amount!');
+        return;
     }
     const historyItem = document.createElement('div');
     historyItem.className = "p-10 border border-gray-400 rounded-xl mb-6 space-y-4";
@@ -87,7 +91,8 @@ document.getElementById('third-donate-button').addEventListener('click', functio
         })
     }
     else {
-        alert('Invalid Amount!')
+        alert('Invalid Amount!');
+        return;
     }
     const historyItem = document.createElement('div');
     historyItem.className = "p-10 border border-gray-400 rounded-xl mb-6 space-y-4";
