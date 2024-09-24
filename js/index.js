@@ -10,9 +10,15 @@ document.getElementById('first-donate-button').addEventListener('click', functio
     const curentWallet = getValueFromText('current-wallet');
     const currentWalletAmount = curentWallet - firstInputValue;
     if (firstInputValue > 0 && typeof (firstInputValue) === 'number') {
+        if (currentWalletAmount > 0) {
+            document.getElementById('current-wallet').innerText = currentWalletAmount;
+        }
+        else {
+            alert('Insufficient Balance!')
+            return;
+        }
         document.getElementById('first-donate-current-amount').innerText = firstInputfinalAmount;
-        document.getElementById('current-wallet').innerText = currentWalletAmount;
-        const addModal = showModal('modal');
+        showModal('modal');
     }
     else {
         alert('Invalid Amount!');
@@ -37,9 +43,15 @@ document.getElementById('second-donate-button').addEventListener('click', functi
     const curentWallet = getValueFromText('current-wallet');
     const currentWalletAmount = curentWallet - secondInputValue;
     if (secondInputValue > 0 && typeof (secondInputValue) === 'number') {
+        if (currentWalletAmount > 0) {
+            document.getElementById('current-wallet').innerText = currentWalletAmount;
+        }
+        else {
+            alert('Insufficient Balance!')
+            return;
+        }
         document.getElementById('second-donate-current-amount').innerText = secondInputFinalAmount;
-        document.getElementById('current-wallet').innerText = currentWalletAmount;
-        const addModal = showModal('modal');
+        showModal('modal');
     }
     else {
         alert('Invalid Amount!');
@@ -63,9 +75,15 @@ document.getElementById('third-donate-button').addEventListener('click', functio
     const curentWallet = getValueFromText('current-wallet');
     const currentWalletAmount = curentWallet - thirdInputValue;
     if (thirdInputValue > 0 && typeof (thirdInputValue) === 'number') {
+        if (currentWalletAmount > 0) {
+            document.getElementById('current-wallet').innerText = currentWalletAmount;
+        }
+        else {
+            alert('Insufficient Balance!')
+            return;
+        }
         document.getElementById('third-card-donate-amount').innerText = thirdInputFinalAmount;
-        document.getElementById('current-wallet').innerText = currentWalletAmount;
-        const addModal = showModal('modal');
+        showModal('modal');
     }
     else {
         alert('Invalid Amount!');
