@@ -2,6 +2,7 @@ const blogButton = document.getElementById('blog-button');
 blogButton.addEventListener('click', function () {
     window.location.href = './blog.html';
 });
+
 //   first card start
 document.getElementById('first-donate-button').addEventListener('click', function () {
     const firstInputValue = getValueFromInput('first-donate-input');
@@ -28,7 +29,7 @@ document.getElementById('first-donate-button').addEventListener('click', functio
     historyItem.className = "p-10 border border-gray-400 rounded-xl mb-6 space-y-4";
     historyItem.innerHTML = `
 <h1 class="text-xl font-bold">${firstInputValue} Taka is Donated for famine-2024 at Noakhali, Bangladesh</h1>
-<p class="font-sm text-gray-400">${new Date().toLocaleDateString()}</p>
+<p class="font-sm text-gray-400">${new Date}</p>
 `;
 
     const historyContainer = document.getElementById('history-list');
@@ -61,7 +62,7 @@ document.getElementById('second-donate-button').addEventListener('click', functi
     historyItem.className = "p-10 border border-gray-400 rounded-xl mb-6 space-y-4";
     historyItem.innerHTML = `
 <h1 class="text-xl font-bold">${secondInputValue} Taka is Donated for famine-2024 at Feni, Bangladesh</h1>
-<p class="font-sm text-gray-400">${new Date().toLocaleDateString()}</p>
+<p class="font-sm text-gray-400">${new Date}</p>
 `;
     const historyContainer = document.getElementById('history-list');
     historyContainer.insertBefore(historyItem, historyContainer.firstChild);
@@ -93,7 +94,7 @@ document.getElementById('third-donate-button').addEventListener('click', functio
     historyItem.className = "p-10 border border-gray-400 rounded-xl mb-6 space-y-4";
     historyItem.innerHTML = `
 <h1 class="text-xl font-bold">${thirdInputValue} Taka is Donated for Aid injured in the Quota Movement , Bangladesh</h1>
-<p class="font-sm text-gray-400">${new Date().toLocaleDateString()}</p>
+<p class="font-sm text-gray-400">${new Date}</p>
 `;
     const historyContainer = document.getElementById('history-list');
     historyContainer.insertBefore(historyItem, historyContainer.firstChild);
