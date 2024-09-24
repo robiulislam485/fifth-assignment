@@ -2,8 +2,6 @@ const blogButton = document.getElementById('blog-button');
 blogButton.addEventListener('click', function () {
     window.location.href = './blog.html';
 });
-
-
 //   first card start
 document.getElementById('first-donate-button').addEventListener('click', function () {
     const firstInputValue = getValueFromInput('first-donate-input');
@@ -14,12 +12,7 @@ document.getElementById('first-donate-button').addEventListener('click', functio
     if (firstInputValue > 0 && typeof (firstInputValue) === 'number') {
         document.getElementById('first-donate-current-amount').innerText = firstInputfinalAmount;
         document.getElementById('current-wallet').innerText = currentWalletAmount;
-
-        document.getElementById('modal').classList.remove('hidden');
-        document.getElementById('close-btn').addEventListener('click', function () {
-        document.getElementById('modal').classList.add('hidden')
-        
-        })
+        const addModal = showModal('modal');
     }
     else {
         alert('Invalid Amount!');
@@ -36,8 +29,6 @@ document.getElementById('first-donate-button').addEventListener('click', functio
     historyContainer.insertBefore(historyItem, historyContainer.firstChild);
 });
 //   first card end
-
-
 // second card start
 document.getElementById('second-donate-button').addEventListener('click', function () {
     const secondInputValue = getValueFromInput('second-card-input');
@@ -48,12 +39,7 @@ document.getElementById('second-donate-button').addEventListener('click', functi
     if (secondInputValue > 0 && typeof (secondInputValue) === 'number') {
         document.getElementById('second-donate-current-amount').innerText = secondInputFinalAmount;
         document.getElementById('current-wallet').innerText = currentWalletAmount;
-
-        document.getElementById('modal').classList.remove('hidden');
-        document.getElementById('close-btn').addEventListener('click', function () {
-        document.getElementById('modal').classList.add('hidden')
-        
-        })
+        const addModal = showModal('modal');
     }
     else {
         alert('Invalid Amount!');
@@ -65,15 +51,10 @@ document.getElementById('second-donate-button').addEventListener('click', functi
 <h1 class="text-xl font-bold">${secondInputValue} Taka is Donated for famine-2024 at Feni, Bangladesh</h1>
 <p class="font-sm text-gray-400">${new Date().toLocaleDateString()}</p>
 `;
-
     const historyContainer = document.getElementById('history-list');
     historyContainer.insertBefore(historyItem, historyContainer.firstChild);
-
 });
-
 // second card end
-
-
 // third card start
 document.getElementById('third-donate-button').addEventListener('click', function () {
     const thirdInputValue = getValueFromInput('third-card-input');
@@ -84,11 +65,7 @@ document.getElementById('third-donate-button').addEventListener('click', functio
     if (thirdInputValue > 0 && typeof (thirdInputValue) === 'number') {
         document.getElementById('third-card-donate-amount').innerText = thirdInputFinalAmount;
         document.getElementById('current-wallet').innerText = currentWalletAmount;
-
-        document.getElementById('modal').classList.remove('hidden');
-        document.getElementById('close-btn').addEventListener('click', function () {
-        document.getElementById('modal').classList.add('hidden')
-        })
+        const addModal = showModal('modal');
     }
     else {
         alert('Invalid Amount!');
@@ -104,8 +81,6 @@ document.getElementById('third-donate-button').addEventListener('click', functio
     historyContainer.insertBefore(historyItem, historyContainer.firstChild);
 });
 // third card end
-
-
 // history and donation button
 const donationTab = document.getElementById('doanation-button');
 const historyTab = document.getElementById('history-button');
